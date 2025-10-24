@@ -15,6 +15,12 @@ body {
   background-color: #fff;
 }
 
+#current {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 0.125rem solid #0000FF;
+}
+
 @media screen and (min-width: 62rem) {
   .content {
     max-width: 62rem;

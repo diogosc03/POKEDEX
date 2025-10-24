@@ -1,0 +1,154 @@
+@import url(./global.css);
+
+main {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Section 01 */
+
+.baseInfo {
+  margin: 0;
+  padding: 2rem 2rem 0rem 1rem;
+
+  background-color: aquamarine;
+}
+
+.baseInfo .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  font-size: 1.625rem;
+}
+
+.baseInfo .buttons > nav > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.baseInfo .buttons > button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #fff;
+}
+
+.baseInfo #name {
+  color: #fff;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.baseInfo #number {
+  display: flex;
+  justify-content: end;
+  margin: 0;
+
+  color: #fff;
+}
+
+.baseInfo .types {
+  display: flex;
+  gap: 0.3125rem;
+  margin: 0 0 2rem;
+  padding: 0;
+
+  list-style: none;
+  color: #fff;
+}
+
+.baseInfo .types > .type {
+  background-color: greenyellow;
+  border-radius: 1rem;
+
+  width: 15%;
+  padding: 0.25rem 0.5rem;
+
+  font-size: 0.625rem;
+  text-align: center;
+}
+
+.baseInfo > img {
+  display: flex;
+  justify-self: center;
+  max-width: 100%;
+  height: 15rem;
+}
+/* Fim da Section 01 */
+
+/* Section 02 */
+.baseStatus {
+  padding: 0rem 1rem 1rem 1rem;
+}
+
+.baseStatus .pages {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem 0 2rem;
+  padding: 0;
+
+  list-style: none;
+}
+
+.baseStatus .pages .page > a {
+  text-decoration: none;
+  color: #808080;
+  font-size: 0.825rem;
+}
+
+.baseStatus .statusList {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.baseStatus .statusList .statLine {
+  width: 100%;
+  padding: 0 0 0.625rem;
+}
+
+.baseStatus .statusList .statLine .statInfo {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 2fr;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.baseStatus .statusList .statLine .statInfo .stat {
+  color: #808080;
+  font-size: 0.825rem;
+}
+
+.baseStatus .statusList .statLine .statInfo #statBar {
+  width: 100%;
+  height: 0.3rem;
+}
+
+.baseStatus .statusList .statLine .statInfo #statBar .statBarBack {
+  width: 100%;
+  height: inherit;
+
+  background-color: aliceblue;
+  border: 1px solid #000;
+  border-radius: 1rem;
+}
+
+.baseStatus .statusList .statLine .statInfo #statBar #statBarFront {
+  width: 45%;
+  height: 100%;
+
+  background-color: red;
+}
+
+.baseStatus > h4 {
+  margin-top: 40px;
+}
+/* Fim da Section 02 */
