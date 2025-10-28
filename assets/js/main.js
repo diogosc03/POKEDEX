@@ -48,3 +48,12 @@ loadMoreButton.addEventListener("click", () => {
     loadPokemonItens(offset, limit);
   }
 });
+
+const updatedList = document.getElementById("pokemonList");
+updatedList.addEventListener("click", (event) => {
+  const clickedItem = event.target.closest("li.pokemon");
+  if (clickedItem) {
+    const pokemonName = clickedItem.querySelector(".name").textContent;
+    return window.location.href = `status.html?name=${pokemonName}`;
+  }
+});

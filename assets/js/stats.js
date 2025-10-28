@@ -1,8 +1,9 @@
 const baseInfo = document.getElementById("baseInfo");
 const statusList = document.getElementById("statusList");
+const text = document.getElementById("text");
 
-function loadPokemonInfo() {
-  pokeApi.getPokemon().then((pokemon) => {
+function loadPokemonInfo(name) {
+  pokeApi.getPokemon(name).then((pokemon) => {
     const newHtml = `
       <h2 id="name">${pokemon.name}</h2>
       <h4 id="number">#${pokemon.number}</h4>
@@ -24,8 +25,8 @@ function loadPokemonInfo() {
   });
 }
 
-function loadPokemonStats() {
-  pokeApi.getPokemon().then((pokemon) => {
+function loadPokemonStats(name) {
+  pokeApi.getPokemon(name).then((pokemon) => {
     let newHtml = pokemon.stats
       .map(
         (stat) =>
@@ -71,8 +72,11 @@ function loadPokemonStats() {
       </li>`;
 
     statusList.innerHTML += newHtml.replace("special-defense", "Sp.Def");
+    text.innerHTML = `The effectiveness of each type on ${pokemon.name}`;
   });
 }
 
-loadPokemonInfo();
-loadPokemonStats();
+const urlParams = new URLSearchParams(window.location.search);
+const pokemonName = urlParams.get("name");
+loadPokemonInfo(pokemonName);
+loadPokemonStats(pokemonName);
