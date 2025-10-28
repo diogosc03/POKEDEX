@@ -13,6 +13,25 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
 
   pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
 
+  const statusList = pokeDetail.stats.map((status) => {
+    const pokeStat = {
+      name: status.stat.name,
+      statNum: status.base_stat,
+    };
+
+    return pokeStat;
+  });
+
+  pokemon.stats = statusList;
+
+  const total = statusList
+    .map((element) => {
+      return element["statNum"];
+    })
+    .reduce((acc, num) => acc + num);
+
+  pokemon.total = total;
+
   return pokemon;
 }
 
@@ -31,5 +50,15 @@ pokeApi.getPokemons = (offset = 0, limit = 5) => {
     .then((pokemons) => pokemons.map(pokeApi.getPokemonDetails))
     .then((detailRequest) => Promise.all(detailRequest))
     .then((pokemonsDetails) => pokemonsDetails)
+    .catch((error) => console.error(error));
+};
+
+pokeApi.getPokemon = (name = "mewtwo") => {
+  const url = `https://pokeapi.co/api/v2/pokemon/${name}`;
+
+  return fetch(url)
+    .then((response) => response.json())
+    .then((jsonBody) => convertPokeApiDetailToPokemon(jsonBody))
+    .then((pokemonDetail) => pokemonDetail)
     .catch((error) => console.error(error));
 };

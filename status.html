@@ -25,25 +25,14 @@
     <title>Pokemon Status</title>
   </head>
   <body>
-    <main>
-      <section class="baseInfo">
+    <main class="content">
+      <section id="baseInfo">
         <div class="buttons">
           <nav><a href="./index.html">&#8592;</a></nav>
           <button>&#9829;</button>
         </div>
 
-        <h2 id="name">Bulbasaur</h2>
-        <h4 id="number">#001</h4>
-
-        <ol class="types">
-          <li class="type">Grass</li>
-          <li class="type">Poison</li>
-        </ol>
-
-        <img
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-          alt="Bulbasaur"
-        />
+        
       </section>
 
       <section class="baseStatus">
@@ -56,95 +45,17 @@
           </ul>
         </nav>
 
-        <ul class="statusList">
-          <li class="statLine">
-            <ul class="statInfo">
-              <li class="stat">HP</li>
-              <li id="Quantity">45</li>
-              <li id="statBar">
-                <div class="statBarBack">
-                  <div id="statBarFront"></div>
-                </div>
-              </li>
-            </ul>
-          </li>
-
-          <li class="statLine">
-            <ul class="statInfo">
-              <li class="stat">Attack</li>
-              <li id="Quantity">60</li>
-              <li id="statBar">
-                <div class="statBarBack">
-                  <div id="statBarFront"></div>
-                </div>
-              </li>
-            </ul>
-          </li>
-
-          <li class="statLine">
-            <ul class="statInfo">
-              <li class="stat">Defence</li>
-              <li id="Quantity">48</li>
-              <li id="statBar">
-                <div class="statBarBack">
-                  <div id="statBarFront"></div>
-                </div>
-              </li>
-            </ul>
-          </li>
-
-          <li class="statLine">
-            <ul class="statInfo">
-              <li class="stat">Sp.Atk</li>
-              <li id="Quantity">65</li>
-              <li id="statBar">
-                <div class="statBarBack">
-                  <div id="statBarFront"></div>
-                </div>
-              </li>
-            </ul>
-          </li>
-
-          <li class="statLine">
-            <ul class="statInfo">
-              <li class="stat">Sp.Defence</li>
-              <li id="Quantity">65</li>
-              <li id="statBar">
-                <div class="statBarBack">
-                  <div id="statBarFront"></div>
-                </div>
-              </li>
-            </ul>
-          </li>
-
-          <li class="statLine">
-            <ul class="statInfo">
-              <li class="stat">Speed</li>
-              <li id="Quantity">45</li>
-              <li id="statBar">
-                <div class="statBarBack">
-                  <div id="statBarFront"></div>
-                </div>
-              </li>
-            </ul>
-          </li>
-
-          <li class="statLine">
-            <ul class="statInfo">
-              <li class="stat">Total</li>
-              <li id="Quantity">317</li>
-              <li id="statBar">
-                <div class="statBarBack">
-                  <div id="statBarFront"></div>
-                </div>
-              </li>
-            </ul>
-          </li>
+        <ul id="statusList">
+          <!-- Status Carregado Dinamicamente -->
         </ul>
 
         <h4>Type defenses</h4>
         <p>The effectiveness of each type on Bulbasaur</p>
       </section>
     </main>
+
+    <script src="./assets/js/pokemon-model.js"></script>
+    <script src="./assets/js/poke-api.js"></script>
+    <script src="./assets/js/stats.js"></script>
   </body>
 </html>

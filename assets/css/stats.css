@@ -1,21 +1,17 @@
 @import url(./global.css);
 
-main {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
+.content {
+  padding: 0;
 }
 
 /* Section 01 */
 
-.baseInfo {
+#baseInfo {
   margin: 0;
-  padding: 2rem 2rem 0rem 1rem;
-
-  background-color: aquamarine;
+  padding: 2rem 1rem 0rem 1rem;
 }
 
-.baseInfo .buttons {
+#baseInfo .buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,25 +20,26 @@ main {
   font-size: 1.625rem;
 }
 
-.baseInfo .buttons > nav > a {
+#baseInfo .buttons > nav > a {
   text-decoration: none;
   color: #fff;
 }
 
-.baseInfo .buttons > button {
+#baseInfo .buttons > button {
   background: none;
   border: none;
   padding: 0;
   color: #fff;
 }
 
-.baseInfo #name {
-  color: #fff;
+#baseInfo #name {
   margin: 0;
+  color: #fff;
   font-size: 2rem;
+  text-transform: capitalize;
 }
 
-.baseInfo #number {
+#baseInfo #number {
   display: flex;
   justify-content: end;
   margin: 0;
@@ -50,7 +47,7 @@ main {
   color: #fff;
 }
 
-.baseInfo .types {
+#baseInfo .types {
   display: flex;
   gap: 0.3125rem;
   margin: 0 0 2rem;
@@ -60,9 +57,9 @@ main {
   color: #fff;
 }
 
-.baseInfo .types > .type {
-  background-color: greenyellow;
+#baseInfo .types > .type {
   border-radius: 1rem;
+  filter: brightness(1.1);
 
   width: 15%;
   padding: 0.25rem 0.5rem;
@@ -71,7 +68,7 @@ main {
   text-align: center;
 }
 
-.baseInfo > img {
+#baseInfo > img {
   display: flex;
   justify-self: center;
   max-width: 100%;
@@ -82,6 +79,7 @@ main {
 /* Section 02 */
 .baseStatus {
   padding: 0rem 1rem 1rem 1rem;
+  text-transform: capitalize;
 }
 
 .baseStatus .pages {
@@ -97,21 +95,22 @@ main {
   text-decoration: none;
   color: #808080;
   font-size: 0.825rem;
+  cursor: pointer;
 }
 
-.baseStatus .statusList {
+.baseStatus #statusList {
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.baseStatus .statusList .statLine {
+.baseStatus #statusList .statLine {
   width: 100%;
   padding: 0 0 0.625rem;
 }
 
-.baseStatus .statusList .statLine .statInfo {
+.baseStatus #statusList .statLine #statInfo {
   display: grid;
   grid-template-columns: 1fr 0.5fr 2fr;
   align-items: center;
@@ -122,17 +121,17 @@ main {
   list-style: none;
 }
 
-.baseStatus .statusList .statLine .statInfo .stat {
+.baseStatus #statusList .statLine #statInfo .stat {
   color: #808080;
   font-size: 0.825rem;
 }
 
-.baseStatus .statusList .statLine .statInfo #statBar {
+.baseStatus #statusList .statLine #statInfo #statBar {
   width: 100%;
   height: 0.3rem;
 }
 
-.baseStatus .statusList .statLine .statInfo #statBar .statBarBack {
+.baseStatus #statusList .statLine #statInfo #statBar .statBarBack {
   width: 100%;
   height: inherit;
 
@@ -141,7 +140,7 @@ main {
   border-radius: 1rem;
 }
 
-.baseStatus .statusList .statLine .statInfo #statBar #statBarFront {
+.baseStatus #statusList .statLine #statInfo #statBar #statBarFront {
   width: 45%;
   height: 100%;
 
@@ -152,3 +151,9 @@ main {
   margin-top: 40px;
 }
 /* Fim da Section 02 */
+
+@media screen and (min-width: 62rem) {
+  #baseInfo {
+    border-radius: 1rem 1rem 0 0;
+  }
+}
